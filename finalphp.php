@@ -10,11 +10,11 @@ if($uname!=0)
 $chk="SELECT id from tab WHERE id=$uname";
 $c=mysqli_query($con,$chk);
 $c=mysqli_fetch_assoc($c);
-$c=$c['username'];
-$qry="insert into tab(id,vote) values('$uname','$op1')";
-$qry=mysqli_query($con,$qry);
+$c=$c['id'];
 }
 if (($c!=$uname)){
+$qry="insert into tab(id,vote) values('$uname','$op1')";
+$qry=mysqli_query($con,$qry);
 if($qry)
 {
 	$chk="SELECT email from mytable WHERE username=$uname";
