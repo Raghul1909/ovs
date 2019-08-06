@@ -193,14 +193,14 @@ label{
 	else{
 		$res="C";
 	}
-	if($op1==$op2){
+	if($op1==$op2 && $op1>$op3){
 		$res="A AND B";
 	}
-	if($op2==$op3){
+	if($op2==$op3 && $op2>$op1){
 		$res="B AND C";
 	}
-	if($op3==$op1){
-		$res="B AND A";
+	if($op3==$op1 && $op3>$op2){
+		$res="C AND A";
 	}
 	
 	?>
